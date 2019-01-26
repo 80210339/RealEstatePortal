@@ -1,0 +1,73 @@
+﻿@page
+@model RealEstatePortal.Pages.Sellers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Seller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerloginID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerloginID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerPassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerPassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerFirstMidName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerFirstMidName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerCompanyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerCompanyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerAddressID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerAddressID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerContactID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerContactID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.AccountCreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.AccountCreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller.SellerPermissionLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seller.SellerPermissionLevel)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Seller.SellerID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

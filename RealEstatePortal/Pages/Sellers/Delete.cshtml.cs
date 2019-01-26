@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RealEstatePortal.Models;
 
-namespace RealEstatePortal.Pages.Buyer
+namespace RealEstatePortal.Pages.Sellers
 {
     public class DeleteModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace RealEstatePortal.Pages.Buyer
         }
 
         [BindProperty]
-        public Buyer Buyer { get; set; }
+        public Seller Seller { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,10 +28,9 @@ namespace RealEstatePortal.Pages.Buyer
                 return NotFound();
             }
 
-            Buyer = await _context.Buyer
-                .Include(b => b.ContactDetails).FirstOrDefaultAsync(m => m.BuyerID == id);
+            Seller = await _context.Seller.FirstOrDefaultAsync(m => m.SellerID == id);
 
-            if (Buyer == null)
+            if (Seller == null)
             {
                 return NotFound();
             }
@@ -45,11 +44,11 @@ namespace RealEstatePortal.Pages.Buyer
                 return NotFound();
             }
 
-            Buyer = await _context.Buyer.FindAsync(id);
+            Seller = await _context.Seller.FindAsync(id);
 
-            if (Buyer != null)
+            if (Seller != null)
             {
-                _context.Buyer.Remove(Buyer);
+                _context.Seller.Remove(Seller);
                 await _context.SaveChangesAsync();
             }
 

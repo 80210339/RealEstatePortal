@@ -1,0 +1,78 @@
+﻿@page
+@model RealEstatePortal.Pages.Properties.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].PropertyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].PropertyType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].NumberOfBedroom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].NumberOfBathrooms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].AddressID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Propertylocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].PropertyDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].PropertyFacilities)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Property) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBedroom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfBathrooms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Propertylocation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyFacilities)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PropertyID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PropertyID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PropertyID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

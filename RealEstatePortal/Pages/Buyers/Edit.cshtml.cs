@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RealEstatePortal.Models;
 
-namespace RealEstatePortal.Pages.Buyer
+namespace RealEstatePortal.Pages.Buyers
 {
     public class EditModel : PageModel
     {

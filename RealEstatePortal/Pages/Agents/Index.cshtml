@@ -1,0 +1,90 @@
+﻿@page
+@model RealEstatePortal.Pages.Agents.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AgentloginID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AgentPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AgentFirstMidName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AgentLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AgentCompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AddressID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].OfficeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AccountCreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].AgentPermissionLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Agent[0].ContactDetails)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Agent) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentloginID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentFirstMidName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentCompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfficeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountCreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentPermissionLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactDetails.ContactDetailsID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AgentID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AgentID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AgentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

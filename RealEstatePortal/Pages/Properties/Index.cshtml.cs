@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RealEstatePortal.Models;
 
-namespace RealEstatePortal.Pages.Buyer
+namespace RealEstatePortal.Pages.Properties
 {
     public class IndexModel : PageModel
     {
@@ -18,12 +18,11 @@ namespace RealEstatePortal.Pages.Buyer
             _context = context;
         }
 
-        public IList<Buyer> Buyer { get;set; }
+        public IList<Property> Property { get;set; }
 
         public async Task OnGetAsync()
         {
-            Buyer = await _context.Buyer
-                .Include(b => b.ContactDetails).ToListAsync();
+            Property = await _context.Property.ToListAsync();
         }
     }
 }

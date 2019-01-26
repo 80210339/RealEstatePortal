@@ -1,0 +1,82 @@
+﻿@page
+@model RealEstatePortal.Pages.Agents.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Agent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AgentloginID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AgentloginID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AgentPassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AgentPassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AgentFirstMidName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AgentFirstMidName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AgentLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AgentLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AgentCompanyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AgentCompanyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AddressID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AddressID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.OfficeID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.OfficeID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AccountCreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AccountCreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.AgentPermissionLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.AgentPermissionLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.ContactDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.ContactDetails.ContactDetailsID)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Agent.AgentID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -10,9 +10,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Agent\" />
-    <Folder Include="Pages\Seller\" />
-  </ItemGroup>
-
 </Project>

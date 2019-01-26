@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using RealEstatePortal.Models;
 
-namespace RealEstatePortal.Pages.Buyer
+namespace RealEstatePortal.Pages.Properties
 {
     public class CreateModel : PageModel
     {
@@ -20,12 +20,11 @@ namespace RealEstatePortal.Pages.Buyer
 
         public IActionResult OnGet()
         {
-        ViewData["ContactDetailsID"] = new SelectList(_context.Set<ContactDetails>(), "ContactDetailsID", "ContactDetailsID");
             return Page();
         }
 
         [BindProperty]
-        public Buyer Buyer { get; set; }
+        public Property Property { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -34,7 +33,7 @@ namespace RealEstatePortal.Pages.Buyer
                 return Page();
             }
 
-            _context.Buyer.Add(Buyer);
+            _context.Property.Add(Property);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RealEstatePortal.Models;
 
-namespace RealEstatePortal.Pages.Buyer
+namespace RealEstatePortal.Pages.Buyers
 {
     public class DetailsModel : PageModel
     {

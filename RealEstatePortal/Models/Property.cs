@@ -20,6 +20,6 @@ namespace RealEstatePortal.Models
                                                         // (32) UPVC DOUBLE GLAZING
 
         public Address Address { get; set; }
-        public FloorPlans FloorPlans { get; set; }
+        public FloorPlan FloorPlans { get; set; }
     }
 }

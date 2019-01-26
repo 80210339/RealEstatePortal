@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RealEstatePortal.Models
 {
-    public class Rooms
+    public class Room
     {
         public int RoomID { get; set; }
         public int PropertyID { get; set; }
@@ -17,7 +17,7 @@ namespace RealEstatePortal.Models
         public string RoomSize { get; set; }
 
         public ICollection<Property> Property { get; set; }
-        public ICollection<FloorPlans> FloorPlans { get; set; }
+        public ICollection<FloorPlan> FloorPlans { get; set; }
         public ICollection<Images> Images { get; set; }
     }
 }

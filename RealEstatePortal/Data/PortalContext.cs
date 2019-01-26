@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using RealEstatePortal;
+using RealEstatePortal.Models;
 
 namespace RealEstatePortal.Models
 {
@@ -14,5 +16,11 @@ namespace RealEstatePortal.Models
         }
 
         public DbSet<RealEstatePortal.Models.Buyer> Buyer { get; set; }
+
+        public DbSet<RealEstatePortal.Agent> Agent { get; set; }
+
+        public DbSet<RealEstatePortal.Models.Seller> Seller { get; set; }
+
+        public DbSet<RealEstatePortal.Models.Property> Property { get; set; }
     }
 }

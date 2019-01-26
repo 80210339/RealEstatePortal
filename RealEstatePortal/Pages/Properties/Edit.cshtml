@@ -1,0 +1,70 @@
+﻿@page
+@model RealEstatePortal.Pages.Properties.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Property</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Property.PropertyID" />
+            <div class="form-group">
+                <label asp-for="Property.PropertyName" class="control-label"></label>
+                <input asp-for="Property.PropertyName" class="form-control" />
+                <span asp-validation-for="Property.PropertyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.PropertyType" class="control-label"></label>
+                <input asp-for="Property.PropertyType" class="form-control" />
+                <span asp-validation-for="Property.PropertyType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.NumberOfBedroom" class="control-label"></label>
+                <input asp-for="Property.NumberOfBedroom" class="form-control" />
+                <span asp-validation-for="Property.NumberOfBedroom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.NumberOfBathrooms" class="control-label"></label>
+                <input asp-for="Property.NumberOfBathrooms" class="form-control" />
+                <span asp-validation-for="Property.NumberOfBathrooms" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.AddressID" class="control-label"></label>
+                <input asp-for="Property.AddressID" class="form-control" />
+                <span asp-validation-for="Property.AddressID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Propertylocation" class="control-label"></label>
+                <input asp-for="Property.Propertylocation" class="form-control" />
+                <span asp-validation-for="Property.Propertylocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.PropertyDescription" class="control-label"></label>
+                <input asp-for="Property.PropertyDescription" class="form-control" />
+                <span asp-validation-for="Property.PropertyDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.PropertyFacilities" class="control-label"></label>
+                <input asp-for="Property.PropertyFacilities" class="form-control" />
+                <span asp-validation-for="Property.PropertyFacilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
