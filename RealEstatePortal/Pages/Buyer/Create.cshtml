@@ -1,0 +1,73 @@
+﻿@page
+@model RealEstatePortal.Pages.Buyer.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Buyer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Buyer.BuyerloginID" class="control-label"></label>
+                <input asp-for="Buyer.BuyerloginID" class="form-control" />
+                <span asp-validation-for="Buyer.BuyerloginID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.BuyerPassword" class="control-label"></label>
+                <input asp-for="Buyer.BuyerPassword" class="form-control" />
+                <span asp-validation-for="Buyer.BuyerPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.BuyerFirstMidName" class="control-label"></label>
+                <input asp-for="Buyer.BuyerFirstMidName" class="form-control" />
+                <span asp-validation-for="Buyer.BuyerFirstMidName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.BuyerLastName" class="control-label"></label>
+                <input asp-for="Buyer.BuyerLastName" class="form-control" />
+                <span asp-validation-for="Buyer.BuyerLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.BuyerCompanyName" class="control-label"></label>
+                <input asp-for="Buyer.BuyerCompanyName" class="form-control" />
+                <span asp-validation-for="Buyer.BuyerCompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.AddressID" class="control-label"></label>
+                <input asp-for="Buyer.AddressID" class="form-control" />
+                <span asp-validation-for="Buyer.AddressID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.ContactDetailsID" class="control-label"></label>
+                <select asp-for="Buyer.ContactDetailsID" class ="form-control" asp-items="ViewBag.ContactDetailsID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.AccountCreationDate" class="control-label"></label>
+                <input asp-for="Buyer.AccountCreationDate" class="form-control" />
+                <span asp-validation-for="Buyer.AccountCreationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Buyer.BuyerPermissionLevel" class="control-label"></label>
+                <input asp-for="Buyer.BuyerPermissionLevel" class="form-control" />
+                <span asp-validation-for="Buyer.BuyerPermissionLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

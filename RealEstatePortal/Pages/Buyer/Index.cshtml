@@ -1,0 +1,84 @@
+﻿@page
+@model RealEstatePortal.Pages.Buyer.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].BuyerloginID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].BuyerPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].BuyerFirstMidName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].BuyerLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].BuyerCompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].AddressID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].AccountCreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].BuyerPermissionLevel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].ContactDetails)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Buyer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerloginID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerFirstMidName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerCompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccountCreationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerPermissionLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactDetails.ContactDetailsID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.BuyerID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.BuyerID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.BuyerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,73 @@
+﻿@page
+@model RealEstatePortal.Pages.Buyer.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Buyer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.BuyerloginID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.BuyerloginID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.BuyerPassword)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.BuyerPassword)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.BuyerFirstMidName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.BuyerFirstMidName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.BuyerLastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.BuyerLastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.BuyerCompanyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.BuyerCompanyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.AddressID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.AddressID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.AccountCreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.AccountCreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.BuyerPermissionLevel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.BuyerPermissionLevel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Buyer.ContactDetails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.ContactDetails.ContactDetailsID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Buyer.BuyerID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
