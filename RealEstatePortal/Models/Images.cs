@@ -10,10 +10,10 @@ namespace RealEstatePortal.Models
     {
         public int ImagesID { get; set; }
         //public Image Picture { get; set; }
-        public int PictureType { get; set; }
-        public int PictureLablel { get; set; }
+        public string PictureType { get; set; }
+        public string PictureLablel { get; set; }
         public DateTime PictureUploadDate { get; set; }
-        public String PictureFileLocation { get; set; } // included file path incase usnable to save to database 
+        public string PictureFileLocation { get; set; } // included file path incase usnable to save to database 
                                                         // due you best practice, easy of uses, size limitation 
                                                         // or converting from image type to BLOB/VARBINARY for the database ???
 

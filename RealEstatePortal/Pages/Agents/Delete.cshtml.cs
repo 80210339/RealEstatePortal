@@ -29,8 +29,7 @@ namespace RealEstatePortal.Pages.Agents
                 return NotFound();
             }
 
-            Agent = await _context.Agent
-                .Include(a => a.ContactDetails).FirstOrDefaultAsync(m => m.AgentID == id);
+            Agent = await _context.Agent.FirstOrDefaultAsync(m => m.AgentID == id);
 
             if (Agent == null)
             {

@@ -7,7 +7,7 @@ namespace RealEstatePortal.Models
 {
     public class Office
     {
-        public string OfficeID { get; set; }       
+        public int OfficeID { get; set; }       
         public string OfficeName { get; set; }      // JNP - HIgh Wycombe, JNP - Hazelmere, 
         public int OfficeAddressID { get; set; }
         public int OfficeContactID { get; set; }

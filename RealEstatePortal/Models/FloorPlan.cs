@@ -10,13 +10,14 @@ namespace RealEstatePortal.Models
         public int FloorPlanID { get; set; }
         public int PropetyID { get; set; }
         public int FloorPlanLevel { get; set; }     // Basement, Ground, First (Might be the same as the the label below?)
-        public int FloorPlanLabel { get; set; }     // First Floor, Front Graden, Back Garden, Garage 
+        public string FloorPlanLabel { get; set; }     // First Floor, Front Graden, Back Garden, Garage 
         public int ImagesID { get; set; }
 
         public Room Room { get; set; }
         public Images Images { get; set; }
 
-        public ICollection<AgentPropertyBuyerSeller> AgentPropertyBuyerSeller { get; set; }
+        public ICollection<Property> Property { get; set; }
+        //public ICollection<AgentPropertyBuyerSeller> AgentPropertyBuyerSeller { get; set; }
 
     }
 }

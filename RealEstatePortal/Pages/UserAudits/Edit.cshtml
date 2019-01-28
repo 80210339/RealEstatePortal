@@ -1,0 +1,50 @@
+﻿@page
+@model RealEstatePortal.Pages.UserAudits.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>UserAudit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserAudit.UserAuditID" />
+            <div class="form-group">
+                <label asp-for="UserAudit.UserID" class="control-label"></label>
+                <input asp-for="UserAudit.UserID" class="form-control" />
+                <span asp-validation-for="UserAudit.UserID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAudit.ActivityType" class="control-label"></label>
+                <input asp-for="UserAudit.ActivityType" class="form-control" />
+                <span asp-validation-for="UserAudit.ActivityType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAudit.ActivityAction" class="control-label"></label>
+                <input asp-for="UserAudit.ActivityAction" class="form-control" />
+                <span asp-validation-for="UserAudit.ActivityAction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserAudit.ActionDate" class="control-label"></label>
+                <input asp-for="UserAudit.ActionDate" class="form-control" />
+                <span asp-validation-for="UserAudit.ActionDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

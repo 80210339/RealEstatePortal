@@ -1,0 +1,61 @@
+﻿@page
+@model RealEstatePortal.Pages.Rooms.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Room</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.PropertyID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.PropertyID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.FloorPlanID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.FloorPlanID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomPictureID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomPictureID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomLabel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomLabel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Room.RoomSize)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Room.RoomSize)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Room.RoomID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

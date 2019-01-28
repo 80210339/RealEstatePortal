@@ -1,0 +1,49 @@
+﻿@page
+@model RealEstatePortal.Pages.AgentPropertyBuyerSellers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AgentPropertyBuyerSeller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AgentPropertyBuyerSeller.AgentID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgentPropertyBuyerSeller.AgentID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgentPropertyBuyerSeller.PropertyID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgentPropertyBuyerSeller.PropertyID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgentPropertyBuyerSeller.BuyerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgentPropertyBuyerSeller.BuyerID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgentPropertyBuyerSeller.SellerID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgentPropertyBuyerSeller.SellerID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AgentPropertyBuyerSeller.REPM_Relationship)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AgentPropertyBuyerSeller.REPM_Relationship)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.AgentPropertyBuyerSeller.AgentPropertyBuyerSellerID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

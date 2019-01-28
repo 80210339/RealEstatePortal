@@ -1,0 +1,43 @@
+﻿@page
+@model RealEstatePortal.Pages.UserAudits.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UserAudit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.UserID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.UserID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.ActivityType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.ActivityType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.ActivityAction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.ActivityAction)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.ActionDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.ActionDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.UserAudit.UserAuditID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

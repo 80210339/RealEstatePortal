@@ -1,0 +1,46 @@
+﻿@page
+@model RealEstatePortal.Pages.UserAudits.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserAudit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.UserID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.UserID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.ActivityType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.ActivityType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.ActivityAction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.ActivityAction)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAudit.ActionDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAudit.ActionDate)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="UserAudit.UserAuditID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

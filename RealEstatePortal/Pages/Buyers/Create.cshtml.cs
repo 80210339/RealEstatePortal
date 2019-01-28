@@ -20,7 +20,6 @@ namespace RealEstatePortal.Pages.Buyers
 
         public IActionResult OnGet()
         {
-        ViewData["ContactDetailsID"] = new SelectList(_context.Set<ContactDetails>(), "ContactDetailsID", "ContactDetailsID");
             return Page();
         }
 

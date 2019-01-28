@@ -45,7 +45,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="Agent.ContactDetailsID" class="control-label"></label>
-                <select asp-for="Agent.ContactDetailsID" class ="form-control" asp-items="ViewBag.ContactDetailsID"></select>
+                <input asp-for="Agent.ContactDetailsID" class="form-control" />
+                <span asp-validation-for="Agent.ContactDetailsID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Agent.OfficeID" class="control-label"></label>

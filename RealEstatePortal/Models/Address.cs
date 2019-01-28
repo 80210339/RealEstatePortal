@@ -7,8 +7,8 @@ namespace RealEstatePortal.Models
 {
     public class Address
     {
-        public string AddressID { get; set; }
-        public string PersonID { get; set; }    // ID of Seller, Buyer, Agent, Office/Business
+        public int AddressID { get; set; }
+        public int PersonID { get; set; }    // ID of Seller, Buyer, Agent, Office/Business
         public string AddressType { get; set; }
         public string Build { get; set; }
         public string Street { get; set; }
@@ -17,5 +17,7 @@ namespace RealEstatePortal.Models
         public string County { get; set; }
         public string PostCode { get; set; }
         public string Country { get; set; }
+
+        public ICollection<Models.Property> Property { get; set; }
     }
 }

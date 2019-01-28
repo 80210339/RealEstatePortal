@@ -1,0 +1,54 @@
+﻿@page
+@model RealEstatePortal.Pages.Imagess.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Images[0].PictureType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Images[0].PictureLablel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Images[0].PictureUploadDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Images[0].PictureFileLocation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Images) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureLablel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureUploadDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PictureFileLocation)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ImagesID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ImagesID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ImagesID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,49 @@
+﻿@page
+@model RealEstatePortal.Pages.Offices.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Office</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Office.OfficeName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Office.OfficeName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Office.OfficeAddressID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Office.OfficeAddressID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Office.OfficeContactID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Office.OfficeContactID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Office.OfficeCompanyRegNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Office.OfficeCompanyRegNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Office.OfficeVatRegNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Office.OfficeVatRegNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Office.OfficeID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

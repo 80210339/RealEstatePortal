@@ -21,7 +21,6 @@ namespace RealEstatePortal.Pages.Agents
 
         public IActionResult OnGet()
         {
-        ViewData["ContactDetailsID"] = new SelectList(_context.Set<ContactDetails>(), "ContactDetailsID", "ContactDetailsID");
             return Page();
         }
 

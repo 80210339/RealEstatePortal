@@ -29,14 +29,12 @@ namespace RealEstatePortal.Pages.Buyers
                 return NotFound();
             }
 
-            Buyer = await _context.Buyer
-                .Include(b => b.ContactDetails).FirstOrDefaultAsync(m => m.BuyerID == id);
+            Buyer = await _context.Buyer.FirstOrDefaultAsync(m => m.BuyerID == id);
 
             if (Buyer == null)
             {
                 return NotFound();
             }
-           ViewData["ContactDetailsID"] = new SelectList(_context.Set<ContactDetails>(), "ContactDetailsID", "ContactDetailsID");
             return Page();
         }
 

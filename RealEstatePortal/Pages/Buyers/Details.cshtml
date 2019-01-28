@@ -48,6 +48,12 @@
             @Html.DisplayFor(model => model.Buyer.AddressID)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Buyer.ContactDetailsID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buyer.ContactDetailsID)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Buyer.AccountCreationDate)
         </dt>
         <dd>
@@ -58,12 +64,6 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Buyer.BuyerPermissionLevel)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Buyer.ContactDetails)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Buyer.ContactDetails.ContactDetailsID)
         </dd>
     </dl>
 </div>

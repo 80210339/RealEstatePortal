@@ -10,7 +10,7 @@ namespace RealEstatePortal.Models
         public int ContactDetailsID { get; set; }                       
         public int UserID { get; set; }                          // ID of Seller, Buyer, Agent, Office/Business
         public string ContactType { get; set; }
-        public string ContactLineline { get; set; }
+        public string ContactLandline { get; set; }
         public string ContactMobile { get; set; }
         public string ContactFax { get; set; }
         public string ContactEmailAddress { get; set; }

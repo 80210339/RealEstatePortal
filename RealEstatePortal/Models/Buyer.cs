@@ -23,6 +23,6 @@ namespace RealEstatePortal.Models
         public Address Address { get; set; }
         public ContactDetails ContactDetails { get; set; }
 
-        public ICollection<AgentPropertyBuyerSeller> AgentPropertyBuyerSeller { get; set; }
+       // public ICollection<AgentPropertyBuyerSeller> AgentPropertyBuyerSeller { get; set; }
     }
 }

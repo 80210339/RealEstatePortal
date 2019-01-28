@@ -1,0 +1,75 @@
+﻿@page
+@model RealEstatePortal.Pages.ContactDetailss.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>ContactDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ContactDetails.ContactDetailsID" />
+            <div class="form-group">
+                <label asp-for="ContactDetails.UserID" class="control-label"></label>
+                <input asp-for="ContactDetails.UserID" class="form-control" />
+                <span asp-validation-for="ContactDetails.UserID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactType" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactType" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactLandline" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactLandline" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactLandline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactMobile" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactMobile" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactMobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactFax" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactFax" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactFax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactEmailAddress" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactEmailAddress" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactEmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactWebsite" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactWebsite" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactWebsite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactFaceBookPage" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactFaceBookPage" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactFaceBookPage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactDetails.ContactTwitter" class="control-label"></label>
+                <input asp-for="ContactDetails.ContactTwitter" class="form-control" />
+                <span asp-validation-for="ContactDetails.ContactTwitter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

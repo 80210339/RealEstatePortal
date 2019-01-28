@@ -20,10 +20,10 @@ namespace RealEstatePortal.Models
                                                             //public string UserType { get; set; }             //and the userType, with passwords, etc, etc
 
 
-        public Address Address { get; set; }
-        public ContactDetails ContactDetails { get; set; }
+        //public Address Address { get; set; }
+        //public ContactDetails ContactDetails { get; set; }
 
-        public ICollection<AgentPropertyBuyerSeller> AgentPropertyBuyerSeller { get; set; }
+        //public ICollection<AgentPropertyBuyerSeller> AgentPropertyBuyerSeller { get; set; }
     }
 
 }

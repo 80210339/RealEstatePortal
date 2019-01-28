@@ -1,0 +1,84 @@
+﻿@page
+@model RealEstatePortal.Pages.ContactDetailss.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].UserID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactLandline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactMobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactFax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactEmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactWebsite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactFaceBookPage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactDetails[0].ContactTwitter)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.ContactDetails) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactLandline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactMobile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactFax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactEmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactWebsite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactFaceBookPage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactTwitter)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ContactDetailsID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ContactDetailsID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ContactDetailsID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

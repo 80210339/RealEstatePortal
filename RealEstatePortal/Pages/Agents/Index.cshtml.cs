@@ -23,9 +23,7 @@ namespace RealEstatePortal.Pages.Agents
 
         public async Task OnGetAsync()
         {
-            Agent = await _context.Agent
-                .Include(a => a.ContactDetails).ToListAsync();
-
+            Agent = await _context.Agent.ToListAsync();
         }
     }
 }

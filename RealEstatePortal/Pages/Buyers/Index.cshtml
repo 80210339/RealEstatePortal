@@ -32,13 +32,13 @@
                 @Html.DisplayNameFor(model => model.Buyer[0].AddressID)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Buyer[0].ContactDetailsID)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Buyer[0].AccountCreationDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Buyer[0].BuyerPermissionLevel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Buyer[0].ContactDetails)
             </th>
             <th></th>
         </tr>
@@ -65,13 +65,13 @@
                 @Html.DisplayFor(modelItem => item.AddressID)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.ContactDetailsID)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.AccountCreationDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.BuyerPermissionLevel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContactDetails.ContactDetailsID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.BuyerID">Edit</a> |

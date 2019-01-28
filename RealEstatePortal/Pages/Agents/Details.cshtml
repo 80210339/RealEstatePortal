@@ -48,6 +48,12 @@
             @Html.DisplayFor(model => model.Agent.AddressID)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Agent.ContactDetailsID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agent.ContactDetailsID)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.Agent.OfficeID)
         </dt>
         <dd>
@@ -64,12 +70,6 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Agent.AgentPermissionLevel)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Agent.ContactDetails)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Agent.ContactDetails.ContactDetailsID)
         </dd>
     </dl>
 </div>

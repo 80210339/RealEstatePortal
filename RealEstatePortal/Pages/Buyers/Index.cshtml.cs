@@ -22,8 +22,7 @@ namespace RealEstatePortal.Pages.Buyers
 
         public async Task OnGetAsync()
         {
-            Buyer = await _context.Buyer
-                .Include(b => b.ContactDetails).ToListAsync();
+            Buyer = await _context.Buyer.ToListAsync();
         }
     }
 }
